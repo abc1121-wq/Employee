@@ -965,4 +965,62 @@ p span {
 	background-repeat: no-repeat;
 	height: 3px;
 }
+
+.carousel-container {
+  position: relative;
+  width: 850px; /* 符合你圖片原本的寬度 */
+  overflow: hidden;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 850px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.02);
+  color: white;
+  border: none;
+  padding: 230px 5px;
+  cursor: pointer;
+  font-size: 36px;
+  z-index: 10;
+}
+
+.nav-btn:hover { background: rgba(0, 0, 0, 0.1); }
+.prev { left: 0; border-radius: 0 5px 5px 0; }
+.next { right: 0; border-radius: 5px 0 0 5px; }
+
+
+.nav-btn2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.01);
+  color: white;
+  border: none;
+  padding: 300px 10px;
+  cursor: pointer;
+  font-size: 36px;
+  z-index: 10;
+}
+
+.nav-btn2:hover { background: rgba(0, 0, 0, 0.08); }
+.prev { left: 0; border-radius: 0 5px 5px 0; }
+.next { right: 0; border-radius: 5px 0 0 5px; }
 /* 以上為首頁之CSS 2014/3/22新增 用於一列兩欄之選單*/
