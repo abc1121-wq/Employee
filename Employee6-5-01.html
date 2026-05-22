@@ -13,8 +13,11 @@
   function MM_preloadImages() { //v3.0
     var d = document; if (d.images) {
       if (!d.MM_p) d.MM_p = new Array();
+      var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+        if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; }
+    }
+  }
 
-function MM_findObj(n, d) { //v4.01
   function MM_findObj(n, d) { //v4.01
     var p, i, x; if (!d) d = document; if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
       d = parent.frames[n.substring(p + 1)].document; n = n.substring(0, p);
@@ -94,6 +97,7 @@ function MM_findObj(n, d) { //v4.01
         <div class="carousel-item"><img src="images/6/6-5-1/03.png" alt="3" /></div>
         <div class="carousel-item"><img src="images/6/6-5-1/04.png" alt="4" /></div>
         <div class="carousel-item"><img src="images/6/6-5-1/05.png" alt="5" /></div>
+		  <div class="carousel-item"><img src="images/6/6-5-1/06.png" alt="5" /></div>
       </div>
       <!-- 左右按鈕 -->
       <button type="button" class="nav-btn prev" onclick="moveSlide(-1)">❮</button>
