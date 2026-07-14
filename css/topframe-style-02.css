@@ -39,7 +39,7 @@ ul,ol{
 	display:none;
     }
 #nav ul li ol li{
-	width: 200px;
+	width: 160px;
 	float: left;
 	line-height: 25px;
 	padding: 0px;
