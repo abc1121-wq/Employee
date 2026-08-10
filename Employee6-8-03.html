@@ -36,7 +36,7 @@ function MM_swapImage() { //v3.0
 	<meta name="Description" content="這是屬於仁寶人的園地" />
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>員工關係部每月快訊</title>
+    <title>職業健康與協助部每月快訊</title>
     <meta http-equiv="Content-Script-Type" content="text/javascript" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 
@@ -72,26 +72,58 @@ body {
       
        <div id="columnsleft_2">
         <div id="columnsTitle4"><font size="+3">每</font>月快訊</div>
-         <div id="columnsTitle10"><img src="images/6/50/08.jpg" alt="" width="50" height="50" border="0" />月號－心靈小品</div>
+         <div id="columnsTitle10"><img src="images/6/50/08.jpg" alt="" width="50" height="50" border="0" />月號－心靈影展</div>
        </div>
        
        <div id="company5">
-       <img src="images/6/6-8-3/01.jpg" alt="" width="1189" height="599" border="0" />
-       <img src="images/6/6-8-3/02.jpg" alt="" width="1189" height="599" border="0" />
-       <img src="images/6/6-8-3/03.jpg" alt="" width="1189" height="599" border="0" />
-       <img src="images/6/6-8-3/04.jpg" alt="" width="1189" height="599" border="0" />
-       <img src="images/6/6-8-3/05.jpg" alt="" width="1189" height="599" border="0" />
-       <img src="images/6/6-8-3/06.jpg" alt="" width="1189" height="599" border="0" />
-       <img src="images/6/6-8-3/07.jpg" alt="" width="1189" height="599" border="0" />
-       <img src="images/6/6-8-3/08.jpg" alt="" width="1189" height="599" border="0" />
-       <img src="images/6/6-8-3/09.jpg" alt="" width="1189" height="599" border="0" />
-	   <img src="images/6/6-8-3/10.jpg" alt="" width="1189" height="599" border="0" />
-		<img src="images/6/6-8-3/11.jpg" alt="" width="1189" height="599" border="0" />   
+     <tr>
+  <td>
+    <div class="carousel-wrapper" style="margin-left: 50px;">
+      <button type="button2" class="nav-btn2 prev" onclick="moveSlide(-1)">❮</button>
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="carousel-item"><img src="images/6/6-8-3/01.JPG" alt="1" /></div>
+			 <div class="carousel-item"><img src="images/6/6-8-3/02.JPG" alt="1" /></div>
+			 <div class="carousel-item"><img src="images/6/6-8-3/03.JPG" alt="1" /></div>
+			 <div class="carousel-item"><img src="images/6/6-8-3/04.JPG" alt="1" /></div>
+			 <div class="carousel-item"><img src="images/6/6-8-3/05.JPG" alt="1" /></div>
+			 <div class="carousel-item"><img src="images/6/6-8-3/06.JPG" alt="1" /></div>
+			 <div class="carousel-item"><img src="images/6/6-8-3/07.JPG" alt="1" /></div>
+			 <div class="carousel-item"><img src="images/6/6-8-3/08.JPG" alt="1" /></div>
+			 <div class="carousel-item"><img src="images/6/6-8-3/09.JPG" alt="1" /></div>
+			
+         
+        </div>
+      </div>
+      <button type="button2" class="nav-btn2 next" onclick="moveSlide(1)">❯</button>
+    </div>
+  </td>
+</tr>
        </div>
        
       
   </div>
 </div>
+	<script type="text/javascript">
+  let currentIndex = 0;
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.carousel-item');
+  const totalSlides = slides.length;
+
+  function moveSlide(direction) {
+    currentIndex += direction;
+
+    // 循環邏輯：如果超過最後一張，回到第一張；如果小於第一張，跳到最後一張
+    if (currentIndex >= totalSlides) {
+      currentIndex = 0;
+    } else if (currentIndex < 0) {
+      currentIndex = totalSlides - 1;
+    }
+
+    const offset = -currentIndex * 850; // 根據寬度位移
+    track.style.transform = `translateX(${offset}px)`;
+  }
+</script>
   <!-- end #container -->
   </body>
 </html>
